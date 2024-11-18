@@ -3,7 +3,6 @@ import json
 
 BASE_URL = "http://127.0.0.1:8000/"
 
-# Test Case 1: Create a new vehicle (POST /vehicle)
 def test_create_vehicle():
     data = {
         "vin": "1HGCM82633A123456",
