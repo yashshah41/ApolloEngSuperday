@@ -16,7 +16,9 @@ class Vehicle(Base):
 
     @validates('vin')
     def convert_upper(self, key, value):
-        return value.upper() if value else value
+        if(len(value) != 17):
+            raise ValueError("VIN must be 17 characters long")
+        return value.upper()
 
     @validates('model_year')
     def validate_year(self, key, value):
