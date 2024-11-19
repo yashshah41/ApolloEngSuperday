@@ -71,16 +71,16 @@ The API includes comprehensive error handling for:
 ### Create a Vehicle
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/vehicle" \
--H "Content-Type: application/json" \
--d '{
-        "vin": "1HGCM82633A123456",
-        "manufacturer_name": "Honda",
-        "description": "Sedan",
-        "horse_power": 200,
-        "model_name": "Civic",
-        "model_year": 2024,
-        "purchase_price": 10000.0,
-        "fuel_type": "Gasoline"
-    }'
+curl -X POST "http://127.0.0.1:8000/vehicle" ^
+-H "Content-Type: application/json" ^
+-d "{
+        \"vin\": \"1HGCM82633A123456\",
+        \"manufacturer_name\": \"Honda\",
+        \"description\": \"Sedan\",
+        \"horse_power\": 200,
+        \"model_name\": \"Civic\",
+        \"model_year\": 2024,
+        \"purchase_price\": 10000.0,
+        \"fuel_type\": \"Gasoline\"
+    }"
 ```
