@@ -71,16 +71,26 @@ The API includes comprehensive error handling for:
 ### Create a Vehicle
 
 ```sh
-curl -X POST "http://127.0.0.1:8000/vehicle" ^
--H "Content-Type: application/json" ^
--d "{
-        \"vin\": \"1HGCM82633A123456\",
-        \"manufacturer_name\": \"Honda\",
-        \"description\": \"Sedan\",
-        \"horse_power\": 200,
-        \"model_name\": \"Civic\",
-        \"model_year\": 2024,
-        \"purchase_price\": 10000.0,
-        \"fuel_type\": \"Gasoline\"
-    }"
+curl -X POST "http://127.0.0.1:8000/vehicle" ^ -H "Content-Type: application/json" ^ -d "{ \"vin\": \"1HGCM82633A123456\", \"manufacturer_name\": \"Honda\", \"description\": \"Sedan\", \"horse_power\": 200, \"model_name\": \"Civic\", \"model_year\": 2024, \"purchase_price\": 10000.0, \"fuel_type\": \"Gasoline\" }"
+```
+
+## Update a Vehicle
+
+```sh
+curl -X PUT "http://127.0.0.1:8000/vehicle/1HGCM82633A123456" ^-H "Content-Type: application/json" ^-d "{\"manufacturer_name\": \"Honda\",        \"description\": \"Sedan\",        \"horse_power\": 220,        \"model_name\": \"Accord\",        \"model_year\": 2024,        \"purchase_price\": 10500.0,        \"fuel_type\": \"Gasoline\"    }
+```
+
+# Get all Vehicles
+```sh
+curl -X GET "http://127.0.0.1:8000/vehicle" 
+```
+
+# Get all Vehicle by VIN
+```sh
+curl -X GET "http://127.0.0.1:8000/vehicle/1HGCM82633A123456"
+```
+
+# Delete a Vehicle by VIN 
+```sh
+curl -X DELETE "http://127.0.0.1:8000/vehicle/1"
 ```
