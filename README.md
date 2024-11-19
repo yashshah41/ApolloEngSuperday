@@ -70,7 +70,7 @@ The API includes comprehensive error handling for:
 
 ### Create a Vehicle
 
-```bash
+```sh
 curl -X POST "http://127.0.0.1:8000/vehicle" ^
 -H "Content-Type: application/json" ^
 -d "{
