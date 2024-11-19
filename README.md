@@ -84,9 +84,3 @@ curl -X POST "http://127.0.0.1:8000/vehicle" \
         "fuel_type": "Gasoline"
     }'
 ```
-
-### Retrieve a Vehicle
-
-```bash
-curl "http://localhost:8000/vehicle/1HGCM82633A123456"
-```
