@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 2. Run the application:
 ```bash
-python3 uvicorn main:app --reload
+uvicorn src.main:app --reload
 ```
 
 The API will be available at `http://127.0.0.1:8000`
